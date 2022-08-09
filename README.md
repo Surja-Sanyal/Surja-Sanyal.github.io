@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Alakesh</title>
+    <title>Surja Sanyal</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,14 +46,14 @@
 			    <div class="col-sm-6 col-md-5 col-lg-5" >
 				<img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Alakesh Kalita" />
 			    <div class="profile-content pull-left">
-				<h3 class="name">Dr. Alakesh Kalita (Ph.D.) </h3>
+				<h3 class="name">Surja Sanyal</h3>
 				<h5 class="desc">Research Fellow <br> 
-						 National University of Singapore, Singapore <br>
-						 Email: alakesh.kalita1025@gmail.com<br>
-						 Email: alakesh@nus.edu.sg<br>
+						 Indian Institute of Technology Guwahati, India <br>
+						 Email: hi.surja06@gmail.com<br>
+						 Email: surja.sanyal@iitg.ac.in<br>
 						 <a href="https://scholar.google.com/citations?user=hVUJBdvOhCIC&hl=en">Google Scholar </a>|
 						 <a href="https://www.linkedin.com/in/alakesh-kalita-39447055/">LinkedIn </a>|
-						  <!--<a href="https://github.com/Alakesh1025/">GitHub </a>|<br>-->
+						  <!--<a href="https://github.com/Surja-Sanyal/">GitHub </a>|<br>-->
 						 <a href="https://www.researchgate.net/profile/Alakesh_Kalita3">ResearchGate</a>|<br>
 						 Ph: +65 88104452<br>
 						 [<a href="Alakesh_CV.pdf">Download CV</a>]</h5>
@@ -110,14 +110,12 @@
                     <div class="section-inner" id="abt">
                         <h2 class="heading">About Me</h2>
                         <div class="content" >
-                            <p >Hi, I'm <a href="http://alakesh1025.github.io/">Alakesh Kalita</a>, 
-                              currently working as a Reserach Fellow in Electrical and Computer Engineering department of <a href="https://www.nus.edu.sg/">National University of Singapore, Singapore</a>. Prior to this, I have received my Ph.D.  with the department of Computer Science and Engineering in 
-                              <a href="http://www.iitg.ac.in">Indian Institute of Technology Guwahati, India</a>, under the supervision of <a href="http://manaskhatua.github.io/">Dr. Manas Khatua</a>.  During my Ph.D., I worked on Adaptive Resource Allocation for Faster Formation of 6TiSCH IoT Network.
-                              </p>    
-         
-        		    <p>It's been more than 6 years, I'm working in the field of Internet of Things. Back in 2016, I worked in an Indian government-sponsored project titled "Quality of Service Provisioning in Internet of Things" as a research scientist. Later, in 2017, I worked in Internet of Vehicle in IIIT Guwahati.</p>
+                            <p >Hi, I'm <a href="http://alakesh1025.github.io/">Surja Sanyal</a>, 
+                              currently working as a Reserach Fellow in the department of Computer Science and Engineering of <a href="https://www.iitg.ac.in">Indian Institute of Technology Guwahati, India</a>, under the supervision of <a href="http://manaskhatua.github.io/">Dr. Manas Khatua</a>, on <b>Industrial IoT network security using machine learning methods</b>. Prior to this, I have received my M.Tech. in the department of Computer Science and Engineering at 
+                              <a href="https://nitdgp.ac.in/">National Institute of Technology Durgapur, India</a>, under the supervision of <a href="https://nitdgp.ac.in/department/computer-science-engineering/faculty-1/sajal-mukhopadhyay">Dr. Sajal Mukhopadhyay</a>.  During my M.Tech., I worked on Game Theoretic Settings for Surplus Food Distribution.
+                              </p> 
 				
-                            <p>My current research interests include Internet of Things, Game Theory in Computer Networks, Software Defined Network, Blockchain</p> 
+                            <p>My current research interests include Internet of Things and Game Theory in Social Interactions.</p> 
 			  
 			    	
                         </div><!--//content-->
@@ -136,7 +134,7 @@
                         <div class="content">
                             <ul class="list-unstyled">
 				<p style="color:blue"> Defended my Ph.D. thesis on 17-May-2022<blink> </blink></p> 
-				 <p style="color:blue">Joined NUS, Singapore on 24-April-2022<blink> </blink></p>    
+				 <p style="color:blue">Joined IIT Guwahati, India on 24-April-2022<blink> </blink></p>    
 				<p style="color:blue"> An article accepted in ACM TIOT,2022 <blink> </blink></p>     
 				<p style="color:blue"> I have published a report on Contiki-NG, TI IoT devices, and FIT IoT-LAB<blink> <a href="https://www.researchgate.net/publication/358138446_Contiki-NG_CC2650_IoT_devices_and_FIT_IoT-LAB">&lt Link &gt</a></blink></p>    
                             </ul>
