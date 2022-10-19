@@ -44,7 +44,7 @@
 
 			  <div class="row">
 			    <div class="col-sm-6 col-md-5 col-lg-5" >
-				<img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Alakesh Kalita" />
+				<img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Surja Sanyal" />
 			    <div class="profile-content pull-left">
 				<h3 class="name">Surja Sanyal</h3>
 				<h5 class="desc">Research Fellow <br> 
@@ -52,11 +52,11 @@
 						 Email: hi.surja06@gmail.com<br>
 						 Email: surja.sanyal@iitg.ac.in<br>
 						 <a href="https://scholar.google.com/citations?user=hVUJBdvOhCIC&hl=en">Google Scholar </a>|
-						 <a href="https://www.linkedin.com/in/alakesh-kalita-39447055/">LinkedIn </a>|
+						 <a href="https://www.linkedin.com/in/Surja-Sanyal-39447055/">LinkedIn </a>|
 						  <!--<a href="https://github.com/Surja-Sanyal/">GitHub </a>|<br>-->
-						 <a href="https://www.researchgate.net/profile/Alakesh_Kalita3">ResearchGate</a>|<br>
+						 <a href="https://www.researchgate.net/profile/Surja Sanyal">ResearchGate</a>|<br>
 						 Ph: +65 88104452<br>
-						 [<a href="Alakesh_CV.pdf">Download CV</a>]</h5>
+						 [<a href="Surja Sanyal.pdf">Download CV</a>]</h5>
 						
 				    
 			    </div><!--//profile-->
@@ -149,7 +149,7 @@
     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
-                <small class="copyright"> &copy;2020 Alakesh Kalita. </small>
+                <small class="copyright"> &copy;2020 Surja Sanyal </small>
         </div><!--//container-->
     </footer><!--//footer-->
  
