@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 
-<!--#include file="include_head.html" -->
+<!--#include virtual="/include_head.html" -->
 
                      
 
