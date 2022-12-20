@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+
+<!--#include file="include_head.html" -->
+
+                     
+
+    
+
+
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-12 col-sm-12 col-xs-12">
+               <section class="experience section">
+                    <div class="section-inner" id="wor">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                            <div class="item" >
+			<ul>
+                                <li>
+					<h5>Doctoral Research Scholar, Indian Institute of Technology Guwahati, Assam, India</h5>
+					<p class="subDetails">July 2021 - December 2024</p>
+					
+				</li>
+				
+				<li>
+					<h5>Masters Research Scholar, National Institute of Technology Durgapur, West Bengal, India</h5>
+					<p class="subDetails">July 2019 - June 2021</p>
+					
+				</li>
+
+				<li>
+					<h5>Data Analyst in Tata Consultancy Services (TCS), Delhi-NCR, India</h5>
+					<p class="subDetails">March 2011 - September 2019</p>
+				</li>
+			</ul>	    
+                            </div><!--//item-->
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+	
+   
+ 
+      
+</section><!--//section-->
+</div><!--//primary-->
+</div><!--//row-->
+</div><!--//masonry--             
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+                <small class="copyright"> &copy;2022 Surja Sanyal </small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
+    <!-- github activity plugin -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>            
+</body>
+</html> 
