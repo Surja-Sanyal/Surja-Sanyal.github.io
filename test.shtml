@@ -8,13 +8,11 @@
 <head> 
 
 <!--#include virtual="include_header.html" -->
-{% include include_header.html %}
 
 </head> 
 
     <body>                 
 
-    {% include include_body.html %}
 
 
     <div class="container sections-wrapper">
