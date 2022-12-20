@@ -2,103 +2,60 @@
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
-<head>
-    <title>Surja Sanyal</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive HTML5 Website landing Page for Developers">
-    <meta name="author" content="3rd Wave Media">    
-    <!--<link rel="shortcut icon" href="favicon.ico">-->
-    <link rel="shortcut icon" href="assets/Photo_W_H_150_200.jpg" type="image/x-icon" />
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    <!-- github acitivity css -->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <link rel="stylesheet" href="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.css">
-    
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-</head> 
-
-<body>
-    <!-- ******HEADER****** --> 
-
- 
-
-
-
-
-    <header class="header">
-        <div class="container">  
-
-			  <div class="row">
-			    <div class="col-sm-5 col-md-5 col-lg-6" >
-				<img class="profile-image img-responsive pull-left" src="assets/Photo_W_H_150_200.jpg" alt="Surja Sanyal" width="110" height="160"/>
-			    <div class="profile-content pull-left">
-				<h3 class="name">Mr. Surja Sanyal</h3>
-				<h5 class="desc"><i class="fa fa-graduation-cap">Doctoral Research Fellow</i><br> 
-						 <i class="fa fa-institution">Indian Institute of Technology Guwahati, India</i><br>
-						 <i class="fa fa-envelope"> hi.surja06@gmail.com</i><br>
-		            			 <i class="fa fa-envelope"> surja.sanyal@iitg.ac.in</i><br>
-						 <i class="fa fa-share-alt-square"> | <a href="https://scholar.google.com/citations?user=Dhg4XswAAAAJ&hl=en&oi=ao">Google Scholar </a>|
-						 <a href="https://in.linkedin.com/in/surja-sanyal-166323b9/">LinkedIn </a>|
-						 <!--<a href="https://github.com/Surja-Sanyal/">GitHub </a>|<br>-->
-						 <a href="https://www.researchgate.net/profile/Surja-Sanyal">ResearchGate </a>|</i><br>
-						 <i class="fa fa-phone-square"> +91 8595320732</i><br>
-						 <i class="fa fa-file-text"> [<a href="https://drive.google.com/file/d/1VV_X_y0zszRguzE4wsGezR1x3eaJ_xtj/view?usp=share_link">Download CV</a>]</i></h5>
-						
-				    
-			    </div><!--//profile-->
-			    </div>
-			    <div class="col-sm-6 col-md-7 col-lg-6 pull-right">
-			     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <ul class="nav navbar-nav">
-				      &nbsp;&nbsp;&nbsp;&nbsp;<li class="active"><a href="index.html" id="current">Home</a></li>
-				      <li ><a href="publication.html">Publications</a></li>
-				       <li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown">Academics
-					<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					  <li><a href="education.html">Education</a></li>
-					  <li><a href="achieve.html">Achievements</a></li>
-					</ul>
-				      </li>
-				      <li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown">Experience
-					<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					  <li><a href="work.html">Work Experience</a></li>
-					  <li><a href="training.html">Workshop & Training</a></li> 
-					</ul>
-				      </li>
-				     	
-				      <li><a href="contact.html">Contact me</a></li>
-				    </ul>
-				</nav>
-			    </div>
-			  </div>
-
-
-                     
-            
-          
-        </div><!--//container-->
 
 	
-    </header><!--//header-->
-    
+<!-- ******HEADER IMPORT CODE START****** -->
+	
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain attribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>	
+
+<head> 
+
+<div include-html="include_header.html"></div> 
+
+<script>
+includeHTML();
+</script>
+
+
+</head> 
+
+    <body>                 
+
+<div include-html="include_body.html"></div> 
+
+<script>
+includeHTML();
+</script>
+	    
+<!-- ******HEADER IMPORT CODE END****** -->
 
 
     
