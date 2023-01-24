@@ -6,18 +6,20 @@
 
 
 <html>
+
 <head>
-  <script type="text/javascript">
-    var number = 123;
+  <script>
+    function myFunction() {
+      var number = "123";
+      document.getElementById("myText").innerHTML = number;
+    }
   </script>
 </head>
 
-<body>
-    <h1>
-      the value for number is:
-      <script type="text/javascript">
-        document.write(number)
-      </script>
-    </h1>
+<body onload="myFunction()">
+
+  <h1>"The value for number is: " <span id="myText"></span></h1>
+
 </body>
+
 </html>
