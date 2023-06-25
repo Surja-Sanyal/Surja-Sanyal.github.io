@@ -1,14 +1,27 @@
 
 <!DOCTYPE html>
 
-
-  
 <html>
   
     <footer class="footer">
         <div class="container text-center">
-                <p>&copy; Copyright 2022 &ndash; <span id="year"></span>, Surja Sanyal. All Rights Reserved.</p>
+                <p>example()</p>
         </div><!--//container-->
     </footer><!--//footer-->
+    <script>
+    function example() {
+        
+        // Creating Date Object 
+        var dateobj = new Date();
+        
+        // Year from the above object 
+        // is being fetched using getFullYear() 
+        var dateObject = dateobj.getFullYear();
+        
+        // Printing current year 
+        document.getElementById("myID").innerHTML = 
+        "&copy; Copyright 2022 &ndash; " + dateObject + ", Surja Sanyal. All Rights Reserved.";
+    }
+    </script>
   
 </html>
