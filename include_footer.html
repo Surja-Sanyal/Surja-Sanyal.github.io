@@ -7,6 +7,15 @@
     <footer class="footer">
        <div class="container text-center">
                 <small class="copyright">
+    <script>
+      const paragraph = `
+      <p>
+        Copyright &copy; ${new Date().getFullYear()} John Doe
+      </p>
+    `;
+
+      document.getElementById('copyright').innerHTML = paragraph;
+    </script>
                   <p>Copyright &copy; 2022 &ndash; <script>new Date().getFullYear();</script> Surja Sanyal. All Rights Reserved.</p>
                    </small>
         </div><!--//container-->
