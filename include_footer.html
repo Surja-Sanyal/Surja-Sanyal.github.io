@@ -2,6 +2,20 @@
 <!DOCTYPE html>
 
 <html>
+
+<script>
+function getYear() {
+  // Get the current date and time
+  var today = new Date();
+
+  // Get the current year
+  var year = today.getFullYear();
+
+  // Return the year
+  return year;
+}
+</script>
+  
   <body>
   
     <footer class="footer">
@@ -12,7 +26,13 @@
 
     <div>{% Now.Year %}</div>
          <div>This year is @DateTime.Now.Year</div>
-         <div year="2023">This year is 2023</div>
+         <div year="2023">This year is 11</div>
+
+<p>The current year is: <span id="year"></span></p>
+<script>
+// Get the current year and set it to the element with the id "year"
+document.getElementById("year").innerHTML = getYear();
+</script>
 
 
         </div><!--//container-->
