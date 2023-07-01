@@ -13,14 +13,14 @@
            <label id="datetime" runat="server"><%= DateTime.Now.ToString() %></label>
           </div>-->
 
-         <div class="container">
-    <p class="text-center">Copyright &copy; 
-        <script>
-            var CurrentYear = new Date().getFullYear()
-            document.write(CurrentYear)
-        </script>
-    </p>
-</div>
+<script type="text/javascript">
+  var currentYear = (new Date).getFullYear();
+  $(document).ready(function() {
+  $("#year").text( (new Date).getFullYear() );
+  });
+</script>
+
+         <p>Copyright <span id="year">TEXT</span> Company Name - All Rights Reserved.</p>
 
         </div><!--//container-->
     </footer><!--//footer-->
