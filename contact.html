@@ -118,15 +118,7 @@ includeHTML();
     <script>
     includeHTML();
     </script> -->
-<script>
-var content = document.getElementById("content");
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "include_footer.html");
-xhr.onload = function() {
-  content.innerHTML = xhr.responseText;
-};
-xhr.send();
-	</script>
+	<include src="./include_footer.html"></include>
  
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
