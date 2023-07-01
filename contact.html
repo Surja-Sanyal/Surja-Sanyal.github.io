@@ -118,9 +118,15 @@ includeHTML();
     <script>
     includeHTML();
     </script> -->
-
-    <!--<script src="include_footer.html"></script>-->
-    <import href="include_footer.html"></import>
+<script>
+var content = document.getElementById("content");
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "include_footer.html");
+xhr.onload = function() {
+  content.innerHTML = xhr.responseText;
+};
+xhr.send();
+	</script>
  
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
