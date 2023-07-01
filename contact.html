@@ -118,7 +118,14 @@ includeHTML();
     <script>
     includeHTML();
     </script> -->
-	<include src="./include_footer.html"></include>
+
+<div class="include_footer"></div>
+
+<script type="text/javascript">
+ $(function (){
+ $(".secdiv").load("include_footer.html");
+});
+</script>
  
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
