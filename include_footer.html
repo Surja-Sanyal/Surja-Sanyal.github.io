@@ -9,35 +9,8 @@
                 <small class="copyright">
                   <p>Copyright &copy; 2022&ndash;2023 Surja Sanyal. All Rights Reserved.</p>
                    </small>
-          <!--<div>
-           <label id="datetime" runat="server"><%= DateTime.Now.ToString() %></label>
-          </div>-->
 
-<div class="container">
-    <p class="text-center">Copyright &copy; 
-        <script>
-            var CurrentYear = new Date().getFullYear()
-            document.write(CurrentYear)
-        </script>
-
-    <div id="currentYear">
-      <%= DateTime.Now.Year.ToString() %>
-    </div>
-  
-    </p>
-</div>
-
-        <div id="myDiv1"></div>
-        <script type="text/javascript">
-        var myDiv1 = document.getElementById("myDiv1");
-
-        myDiv1.innerHTML = "<b>Content of 1st DIV</b>";
-        </script>
-
-<script>
-  var currentYear = document.getElementById("currentYear");
-  currentYear.innerHTML = DateTime.Now.Year.ToString();
-</script>
+    <div>{% Now.Year %}</div>
 
 
         </div><!--//container-->
