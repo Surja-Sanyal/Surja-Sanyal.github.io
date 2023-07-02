@@ -49,11 +49,12 @@ includeHTML();
 
     <body>                 
 
-<div include-html="include_body.html"></div> 
-
-<script>
-includeHTML();
-</script>
+<div id="include_body"></div>
+<script> 
+$(function(){
+$("#include_body").load("include_body.html"); 
+});
+</script> 
 	    
 <!-- ******HEADER IMPORT CODE END****** -->
 
@@ -113,11 +114,6 @@ includeHTML();
     
     <!-- ******FOOTER****** --> 
 
-    <!--<div include-html="include_footer.html"></div>
-
-    <script>
-    includeHTML();
-    </script> -->
 
 <div class="footer" id="include_footer"></div>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>	
