@@ -2,29 +2,15 @@
 <!DOCTYPE html>
 
 <html>
-
-<script>
-function getYear() {
-  // Get the current date and time
-  var today = new Date();
-
-  // Get the current year
-  var year = today.getFullYear();
-
-  // Return the year
-  return year;
-}
-</script>
   
   <body>
   
     <footer class="footer">
        <div class="container text-center">
                 <small class="copyright">
-                  <p>Copyright &copy; 2022&ndash;2023 Surja Sanyal. All Rights Reserved.</p>
+                  <p>Copyright &copy; 2022&ndash;<span id="year"></span> Surja Sanyal. All Rights Reserved.</p>
                    </small>
 
-<p>The current year is: <span id="year"></span></p>
 <script>
 // Get the current year and set it to the element with the id "year"
 document.getElementById("year").innerHTML = getYear();
