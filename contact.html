@@ -16,7 +16,20 @@ $("#include_header").load("include_header.html");
 });
 </script> 
 
+<script> 
+$(function(){
+$("#include_body").load("include_body.html"); 
+});
+</script> 
+
+<script> 
+$(function(){
+$("#include_footer").load("include_footer.html"); 
+});
+</script> 
+
 <div id="include_header"></div>
+<div id="include_body"></div>
 
 </head> 
 
@@ -79,11 +92,6 @@ $("#include_header").load("include_header.html");
 
 
 <div class="footer" id="include_footer"></div>
-<script> 
-$(function(){
-$("#include_footer").load("include_footer.html"); 
-});
-</script> 
  
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
