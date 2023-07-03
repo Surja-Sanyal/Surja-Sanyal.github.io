@@ -8,25 +8,29 @@
 
 <head> 
 
-<div id="include_header"></div>
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>	
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="jquery.js"></script> 
+
 <script> 
 $(function(){
 $("#include_header").load("include_header.html"); 
 });
+ 
+$(function(){
+$("#include_body").load("include_body.html"); 
+});
+
+$(function(){
+$("#include_footer").load("include_footer.html"); 
+});
 </script> 
+
+<div id="include_header"></div>
+<div id="include_body"></div>
 
 </head> 
 
 <body>                 
-
-<div id="include_body"></div>
-<script> 
-$(function(){
-$("#include_body").load("include_body.html"); 
-});
-</script> 
 	    
 <!-- ******HEADER IMPORT CODE END****** -->
 
@@ -77,11 +81,6 @@ $("#include_body").load("include_body.html");
     <!-- ******FOOTER****** --> 
 
 <div class="footer" id="include_footer"></div>
-<script> 
-$(function(){
-$("#include_footer").load("include_footer.html"); 
-});
-</script> 
  
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
