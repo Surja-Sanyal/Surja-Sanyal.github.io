@@ -77,4 +77,51 @@
 	
     </header><!--//header-->
 
+
+
+
+<script>
+  const names = [
+    "Surja Sanyal",
+    "सूर्य सान्याल",
+    "সূর্য সান্যাল"
+    "सूर्यः सान्यालः",
+  ];
+
+  const intro = "Mr. ";
+  let currentIndex = 0;
+  let currentLetterIndex = 0;
+  let intervalId;
+
+  function startTyping() {
+    let nameElement = document.querySelector('.name');
+    if (currentLetterIndex < names[currentIndex].length) {
+      nameElement.textContent = intro + names[currentIndex].substring(0, currentLetterIndex + 1);
+      currentLetterIndex++;
+    } else {
+      clearInterval(intervalId);
+      setTimeout(() => {
+        intervalId = setInterval(deleteName, 50);
+      }, 1000);
+    }
+  }
+
+  function deleteName() {
+    let nameElement = document.querySelector('.name');
+    if (currentLetterIndex > 0) {
+      nameElement.textContent = intro + names[currentIndex].substring(0, currentLetterIndex);
+      currentLetterIndex--;
+    } else {
+      clearInterval(intervalId);
+      currentIndex = (currentIndex + 1) % names.length;
+      currentLetterIndex = 0;
+      intervalId = setInterval(startTyping, 100);
+    }
+  }
+
+  intervalId = setInterval(startTyping, 100); // Start typing
+</script>
+
+				  
+
 </html>
