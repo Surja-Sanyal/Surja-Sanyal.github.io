@@ -45,7 +45,7 @@ a.btn {
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   font-family: 'Montserrat', arial, sans-serif;
-  padding: 8px 16px;
+  padding: 8px ;
   font-weight: bold;
 }
 .btn .fa,
@@ -128,7 +128,7 @@ iframe {
 }
 .header .profile-content .name {
   color: #49515a;
-  font-size: 16px;
+  /*font-size: 16px;*/
   margin-bottom: 3px;
   margin-top: 3px;
 }
