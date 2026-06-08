@@ -34,11 +34,11 @@
 \makeatother
 
 
-\newcommand{\framedphoto}[2][2.5cm]{%
+\newcommand{\framedphoto}[2][2.8cm]{%
   \rightheader{%
     \llap{% 
       \setlength{\fboxrule}{1.0pt}% Border thickness
-      \setlength{\fboxsep}{3pt}% White padding inside border
+      \setlength{\fboxsep}{0pt}% White padding inside border
       % \fcolorbox{BorderColor}{BackgroundColor}{Content}
       \fcolorbox{MaroonHTML}{white}{\includegraphics[width=#1]{#2}}%
     }%
@@ -129,16 +129,16 @@
   %\makefield{\faTwitter}{\texttt{@example}}
 
   % \makefield{\faInfoCircle}{\href{https://surja-sanyal.github.io}{Surja~Sanyal~@~GitHub}}
-  \makefield{\faGithubSquare}{\url{https://surja-sanyal.github.io}}
+  \makefield{\faGithubSquare}{\href{https://surja-sanyal.github.io}{https://surja-sanyal.github.io}}
 
-  \makefield{\faOrcid}{\url{https://orcid.org/0000-0002-1308-9433}}
+  \makefield{\faOrcid}{\href{https://orcid.org/0000-0002-1308-9433}{https://orcid.org/0000-0002-1308-9433}}
 
   % \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/surja-sanyal-166323b9}{Surja~Sanyal~@~LinkedIn}}
-  \makefield{\faLinkedin}{\url{https://www.linkedin.com/in/surja-sanyal}}
+  \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/surja-sanyal}{https://www.linkedin.com/in/surja-sanyal}}
 
-  \makefield{\aiGoogleScholarSquare}{\url{https://scholar.google.com/citations?user=Dhg4XswAAAAJ}}
+  \makefield{\aiGoogleScholarSquare}{\href{https://scholar.google.com/citations?user=Dhg4XswAAAAJ}{https://scholar.google.com/citations?user=Dhg4XswAAAAJ}}
 
-  \makefield{\faEnvelope[solid]}{\href{mailto:hi.surja06@gmail.com}{\large hi.surja06@gmail.com}; ~\href{mailto:surja.sanyal@iitg.ac.in}{\large surja.sanyal@iitg.ac.in}; ~\href{mailto:surja.sanyal@iitbhu.ac.in}{\large surja.sanyal@iitbhu.ac.in}}
+  \makefield{\faEnvelope[solid]}{\href{mailto:hi.surja06@gmail.com}{hi.surja06@gmail.com}; ~\href{mailto:surja.sanyal@iitg.ac.in}{surja.sanyal@iitg.ac.in}; ~\href{mailto:surja.sanyal@iitbhu.ac.in}{surja.sanyal@iitbhu.ac.in}}
 
   %\makefield{\faLocationArrow}{\texttt{2A, Hazi Jakaria Lane, Manicktala, Kolkata 700006, West Bengal, India.}}
 
@@ -148,8 +148,8 @@
 
 \rightheader{~}
 \begin{fullonly}
-\framedphoto[2.8cm]{photo.jpg}
-% \photo[r]{cv_source/photo.jpg}
+\framedphoto[3.0cm]{photo.jpg}
+% \photo[r]{photo.jpg}
 % \photoscale{0.17}
 \end{fullonly}
 
