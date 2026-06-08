@@ -17,7 +17,9 @@
 \usepackage{xurl}
 \usepackage{academicons}
 
+\definecolor{backgroundMaroon}{HTML}{8A1538}
 \definecolor{MaroonHTML}{HTML}{800000}
+
 \newcommand{\hl}[1]{\textcolor{MaroonHTML}{#1}}
 
 \renewcommand*{\mkbibnamegiven}[1]{%
@@ -26,11 +28,22 @@
 \renewcommand*{\mkbibnamefamily}[1]{%
   \ifitemannotation{highlight}{\textbf{#1}}{#1}}
 
- 
-\definecolor{mymaroon}{HTML}{8A1538}
 
-% \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-%    \node[shape=circle,text=white,fill=MarkerColour!80!black,font=\sffamily\scriptsize\bfseries,inner sep=1pt,text height=1.35ex,minimum width=1.5em,text centered] (char) {#1};}}
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{36}{48}} 
+\makeatother
+
+
+\newcommand{\framedphoto}[2][2.5cm]{%
+  \rightheader{%
+    \llap{% 
+      \setlength{\fboxrule}{1.5pt}% Border thickness
+      \setlength{\fboxsep}{3pt}% White padding inside border
+      % \fcolorbox{BorderColor}{BackgroundColor}{Content}
+      \fcolorbox{MaroonHTML}{white}{\includegraphics[width=#1]{#2}}%
+    }%
+  }%
+}
 
 % Change the fonts if you want
 \ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
@@ -104,10 +117,9 @@
 
 \leftheader{%
   % {\Huge\bfseries\sffamily\textsc{Surja Sanyal}}
-  {\Huge\bfseries\textsc{Surja Sanyal}\vspace{5pt}}
+  {\HUGE\bfseries\textsc{\hl{Surja Sanyal}}\vspace{2pt}}
 
-  \makefield{\faPhoneSquare}{$+91-8595~320~732$}
-
+  \makefield{\faPhoneSquare}{$+91-85~95~320~732$}\hspace{-1.75em}\makefield{\faComment}{}%
   
 
   % \makefield{\faEnvelope[solid]}{\href{mailto:surja.sanyal@iitg.ac.in}{surja.sanyal@iitg.ac.in}}
@@ -117,20 +129,16 @@
   %\makefield{\faTwitter}{\texttt{@example}}
 
   % \makefield{\faInfoCircle}{\href{https://surja-sanyal.github.io}{Surja~Sanyal~@~GitHub}}
-  \makefield{\faInfoCircle}{\url{https://surja-sanyal.github.io}}
+  \makefield{\faGithubSquare}{\url{https://surja-sanyal.github.io}}
 
-  %\makefield{\faGithub[regular]}{\url{https://github.com/Surja-Sanyal}}
-
-  % \makefield{\faUniversity}{\url{https://www.iitg.ac.in/cse/student-pages/surja.sanyal}}
+  \makefield{\faOrcid}{\url{https://orcid.org/0000-0002-1308-9433}}
 
   % \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/surja-sanyal-166323b9}{Surja~Sanyal~@~LinkedIn}}
   \makefield{\faLinkedin}{\url{https://www.linkedin.com/in/surja-sanyal}}
 
-  \makefield{\faOrcid}{\url{https://https://orcid.org/0000-0002-1308-9433}}
-
   \makefield{\aiGoogleScholarSquare}{\url{https://scholar.google.com/citations?user=Dhg4XswAAAAJ}}
 
-  \makefield{\faEnvelope[solid]}{\href{mailto:hi.surja06@gmail.com}{hi.surja06@gmail.com}; ~\href{mailto:surja.sanyal@iitg.ac.in}{surja.sanyal@iitg.ac.in}; ~\href{mailto:surja.sanyal@iitbhu.ac.in}{surja.sanyal@iitbhu.ac.in}}
+  \makefield{\faEnvelope[solid]}{\href{mailto:hi.surja06@gmail.com}{\large hi.surja06@gmail.com}; ~\href{mailto:surja.sanyal@iitg.ac.in}{\large surja.sanyal@iitg.ac.in}; ~\href{mailto:surja.sanyal@iitbhu.ac.in}{\large surja.sanyal@iitbhu.ac.in}}
 
   %\makefield{\faLocationArrow}{\texttt{2A, Hazi Jakaria Lane, Manicktala, Kolkata 700006, West Bengal, India.}}
 
@@ -140,11 +148,12 @@
 
 \rightheader{~}
 \begin{fullonly}
-\photo[r]{photo}
-\photoscale{0.17}
+\framedphoto[2.8cm]{cv_source/photo.jpg}
+% \photo[r]{cv_source/photo.jpg}
+% \photoscale{0.17}
 \end{fullonly}
 
-\title{Surja Sanyal $-$ CV}
+\title{Surja Sanyal -- CV}
 
 \makeatletter
 \let\doctitle\@title
