@@ -1,0 +1,31 @@
+name: Compile and Update CV
+
+# This tells GitHub to only run this script when you change files inside cv_source
+on:
+  push:
+    paths:
+      - 'cv_source/**'
+
+jobs:
+  build_cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: cv_source/
+
+      - name: Move PDF to Website Assets
+        run: |
+          mkdir -p assets
+          mv cv_source/main.pdf assets/Surja_Sanyal_CV.pdf
+
+      - name: Commit and Push PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-updated CV PDF"
+          file_pattern: "assets/Surja_Sanyal_CV.pdf"
