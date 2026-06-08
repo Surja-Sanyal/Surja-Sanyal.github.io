@@ -13,16 +13,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Verify files exist
-        run: |
-          pwd
-          ls -la
-          ls -la cv_source/
-
-      - name: Compile LaTeX
+      - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
+          latexmk_use_lualatex: true
           working_directory: cv_source/
 
       - name: Move PDF to Website Assets
