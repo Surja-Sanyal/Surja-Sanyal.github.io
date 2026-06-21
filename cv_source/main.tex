@@ -22,12 +22,7 @@
 
 \newcommand{\hl}[1]{\textbf{\textcolor{MaroonHTML}{#1}}}
 
-\renewcommand*{\mkbibnamegiven}[1]{%
-  \ifitemannotation{highlight}{\textbf{#1}}{#1}}
-
-\renewcommand*{\mkbibnamefamily}[1]{%
-  \ifitemannotation{highlight}{\textbf{#1}}{#1}}
-
+\DeclareFieldFormat*{title}{\hl{#1}}
 
 \makeatletter
 \newcommand\HUGE{\@setfontsize\Huge{36}{48}} 
@@ -64,7 +59,7 @@
 
 %% Specify your last name and first name (as given in the .bib) to automatically bold your own name in the publications list. One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly for now...
 % \myname{Lim}{Lian\bibnamedelima Tze}
-% \myname{Sanyal}{Surja}
+\myname{Sanyal}{Surja}
 
 % Change the page margins if you want
 % \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
@@ -119,7 +114,7 @@
   % {\Huge\bfseries\sffamily\textsc{Surja Sanyal}}
   {\HUGE\bfseries\textsc{\hl{Surja Sanyal}}\vspace{2pt}}
 
-  \makefield{\faPhoneSquare}{\texttt{+91 -- 85~95~320~732}}\hspace{-1.75em}\makefield{\faComments[regular]}{}\hspace{-2.3em}\makefield{\faWhatsapp}{}%
+  \makefield{\faPhoneSquare}{\href{tel:+918595320732}{\texttt{+91 -- 85~95~320~732}}}\hspace{-1.75em}\makefield{\faComments[regular]}{}\hspace{-2.3em}\makefield{\faWhatsapp}{}%
 
   \makefield{\faGithubSquare}{\href{https://surja-sanyal.github.io}{\texttt{https://surja-sanyal.github.io}}}
 
@@ -127,11 +122,11 @@
 
   \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/surja-sanyal}{\texttt{https://www.linkedin.com/in/surja-sanyal}}}
 
-  \makefield{\aiGoogleScholarSquare}{\href{https://scholar.google.com/citations?user=Dhg4XswAAAAJ}{\texttt{https://scholar.google.com/citations?user=Dhg4XswAAAAJ}}}
+  \makefield{\aiGoogleScholarSquare}{\href{https://scholar.google.com/citations?user=Dhg4XswAAAAJ}{\texttt{https://scholar.google.com/users/surja-sanyal}}}
 
   \makefield{\faEnvelope[solid]}{\href{mailto:surja.sanyal@iitg.ac.in}{\texttt{surja.sanyal@iitg.ac.in}}; ~\href{mailto:surja.sanyal@iitbhu.ac.in}{\texttt{surja.sanyal@iitbhu.ac.in}}; ~\href{mailto:hi.surja06@gmail.com}{\texttt{hi.surja06@gmail.com}}}
 
-  \makefield{\faLocationArrow}{\texttt{House\# 2A, Hazi Jakaria Lane, Manicktala, Kolkata 700006, West Bengal, India}}
+  \makefield{\faLocationArrow}{\href{https://maps.app.goo.gl/ENLAr5ycvCtREhQX8}{\texttt{House\# 2A, Hazi Jakaria Lane, Manicktala, Kolkata 700006, West Bengal, India}}}
 }
 
 
