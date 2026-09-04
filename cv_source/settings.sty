@@ -31,8 +31,10 @@
 \usetikzlibrary{shapes,shadows}
 
 \RequirePackage{comment}
-\definecolor{SwishLineColour}{HTML}{88AC0B}
-\definecolor{MarkerColour}{HTML}{B6073F}
+% \definecolor{SwishLineColour}{HTML}{88AC0B}
+% \definecolor{MarkerColour}{HTML}{B6073F}
+\definecolor{SwishLineColour}{HTML}{7F8C8D} % Slate Gray
+\definecolor{MarkerColour}{HTML}{1A365D}    % Deep Navy Blue
 
 % If you're not a researcher nor an academic, you probably don't need biblatex; delete this line.
 \RequirePackage[bibstyle=apa6,sorting=ymdnt,uniquename=init,defernumbers=true]{biblatex}
@@ -73,16 +75,22 @@
 }
 
 \RequirePackage{tikz}
-\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-   \node[shape=circle,text=white,fill=MarkerColour!80!black,font=\sffamily\scriptsize\bfseries,inner sep=1pt,text height=1.35ex,minimum width=1.5em,text centered] (char) {#1};}}
+% \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+%    \node[shape=circle,text=white,fill=MarkerColour!80!black,font=\sffamily\scriptsize\bfseries,inner sep=1pt,text height=1.35ex,minimum width=1.5em,text centered] (char) {#1};}}
+\RequirePackage{amsmath}
+\newcommand*\circled[1]{$\boldsymbol{#1.}$}
    
+% \newcounter{bibitem}
+% \AtBeginBibliography{\setcounter{bibitem}{1}}
+% \AtEveryBibitem{\makebox[2.5em][l]{\circled{\thebibitem}\stepcounter{bibitem}}}
 \newcounter{bibitem}
 \AtBeginBibliography{\setcounter{bibitem}{1}}
-\AtEveryBibitem{\makebox[2.5em][l]{\circled{\thebibitem}\stepcounter{bibitem}}}
+\AtEveryBibitem{\makebox[1.5em][l]{\circled{\thebibitem}\stepcounter{bibitem}}}
 
 % \renewcommand{\bibfont}{\small}
 \setlength{\bibitemsep}{1.5ex}
-\setlength{\bibhang}{2.5em}
+% \setlength{\bibhang}{2.5em}
+\setlength{\bibhang}{2.0em}
 \RequirePackage{xpatch}
 \xpretofieldformat{doi}
   {\textcolor{MarkerColour!80!black}{\scriptsize\faLink}}
@@ -118,7 +126,8 @@
 \urlstyle{tt}
 
 \newcommand{\prefixmarker}[1]{\def\@prefixmarker{#1}}
-\def\@prefixmarker{\relscale{.9}\faBookmark}
+% \def\@prefixmarker{\relscale{.9}\faBookmark}
+\def\@prefixmarker{\relscale{.9}\faAngleRight}
 
 \prefix{%
   \hspace*{-1ex}

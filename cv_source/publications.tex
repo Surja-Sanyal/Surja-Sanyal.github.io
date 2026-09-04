@@ -7,10 +7,14 @@
 %% If you just want everything in one list
 % \printbibliography[heading={none}]
 
-\printbibliography[heading={subbibliography},title={\textsc{\underline{Journal Articles}}},type=article]
+%% 1. Published and Accepted Journals
+\printbibliography[heading={subbibliography},title={\textsc{\underline{Published and Accepted Journal Articles}}},type=article,check=published]
 
+%% 2. Journals Under Review / Revision
+\printbibliography[heading={subbibliography},title={\textsc{\underline{Journal Articles Under Review and Revision}}},type=article,check=inreview]
+
+%% 3. Conferences
 \printbibliography[heading={subbibliography},title={\textsc{\underline{Conference Proceedings}}},type=inproceedings]
 
+%% 4. Books and Chapters
 \printbibliography[heading={subbibliography},title={\textsc{\underline{Books and Chapters}}},filter={booksandchapters}]
-
-% \printbibliography[heading=subbibliography]
