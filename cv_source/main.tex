@@ -16,17 +16,57 @@
 \usepackage{settings}
 \usepackage{xurl}
 \usepackage{academicons}
+% \usepackage{enumitem}
 
-\definecolor{backgroundMaroon}{HTML}{8A1538}
-\definecolor{MaroonHTML}{HTML}{800000}
+% \definecolor{SwishLineColour}{HTML}{8A1538}
+% \definecolor{MarkerColour}{HTML}{800000}
+\definecolor{SwishLineColour}{HTML}{7F8C8D} % Slate Gray
+\definecolor{MarkerColour}{HTML}{1A365D}    % Deep Navy Blue
 
-\newcommand{\hl}[1]{\textbf{\textcolor{MaroonHTML}{#1}}}
+\newcommand{\hl}[1]{\textbf{#1}}
+% \newcommand{\hl}[1]{\textbf{\textcolor{MarkerColour}{#1}}}
 
-\DeclareFieldFormat*{title}{\hl{#1}}
+% \DeclareFieldFormat*{title}{\hl{#1}}    % This highlights the title of the paper
+\DeclareFieldFormat*{note}{\hl{#1}} 
 
 \makeatletter
 \newcommand\HUGE{\@setfontsize\Huge{36}{48}} 
 \makeatother
+
+
+%% Check for published articles: skips if note is "(Under Review)" OR "(Under Revision)"
+\defbibcheck{published}{%
+  \iffieldequalstr{note}{(Under Review)}
+    {\skipentry}
+    {\iffieldequalstr{note}{(Under Revision)}
+       {\skipentry}
+       {}% Keeps the entry if it is neither
+    }%
+}
+
+%% Check for manuscripts in progress: keeps if note is "(Under Review)" OR "(Under Revision)"
+\defbibcheck{inreview}{%
+  \iffieldequalstr{note}{(Under Review)}
+    {} % Keeps the entry
+    {\iffieldequalstr{note}{(Under Revision)}
+       {} % Keeps the entry
+       {\skipentry}% Skips if it is neither
+    }%
+}
+
+
+\AtEveryBibitem{%
+  \clearfield{extradate} % Removes the 'a', 'b', 'c' from modern biblatex
+  \clearfield{extrayear} % Included for compatibility with older biblatex/apa versions
+  \iffieldequalstr{note}{(Under Review)}
+    {\clearfield{note}}
+    {}%
+  % \iffieldequalstr{note}{(Under Revision)}
+  %   {\clearfield{note}}
+  %   {}%
+}
+
+
 
 
 \newcommand{\framedphoto}[2][2.8cm]{%
@@ -35,7 +75,7 @@
       \setlength{\fboxrule}{1.0pt}% Border thickness
       \setlength{\fboxsep}{0pt}% White padding inside border
       % \fcolorbox{BorderColor}{BackgroundColor}{Content}
-      \fcolorbox{MaroonHTML}{white}{\includegraphics[width=#1]{#2}}%
+      \fcolorbox{MarkerColour}{white}{\includegraphics[width=#1]{#2}}%
     }%
   }%
 }
@@ -129,10 +169,10 @@
     \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/surja-sanyal}{\texttt{https://www.linkedin.com/in/surja-sanyal}}}
     
     \makefield{\aiGoogleScholarSquare}{\href{https://scholar.google.com/citations?user=Dhg4XswAAAAJ}{\texttt{https://scholar.google.com/users/surja-sanyal}}}
+
+    \makefield{\faLocationArrow}{\href{https://maps.app.goo.gl/BkxW4D6nqKTSmi2eA}{\texttt{Manicktala, Kolkata 700006, West Bengal, India}}}
     
     \makefield{\faEnvelope[solid]}{\href{mailto:surja.sanyal@iitg.ac.in}{\texttt{surja.sanyal@iitg.ac.in}}; ~\href{mailto:surja.sanyal@iitbhu.ac.in}{\texttt{surja.sanyal@iitbhu.ac.in}}; ~\href{mailto:hi.surja06@gmail.com}{\texttt{hi.surja06@gmail.com}}}
-    
-    \makefield{\faLocationArrow}{\href{https://maps.app.goo.gl/ENLAr5ycvCtREhQX8}{\texttt{House\# 2A, Hazi Jakaria Lane, Manicktala, Kolkata 700006, West Bengal, India}}}
 }
 
 
@@ -155,27 +195,29 @@
 
 \input{objective}
 
+\input{acad-interests}
+
 \makerubric{education}
+
+\makerubric{research}
+
+\input{publications}
 
 \makerubric{employment}
 
-% If you're not a researcher nor an academic, you probably don't have any publications; delete this line.
-%% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own and use \input NOT \makerubric
-\newpage
-
-\input{publications}
+\makerubric{teaching}
 
 \makerubric{skills}
 
 \makerubric{misc}
 
-\input{acad-interests}
+% \input{acad-interests}
 
-\input{non-acad-interests}
+% \input{non-acad-interests}
 
 % \newpage
 
-\input{about-me}
+% \input{about-me}
 
 % \newpage
 
