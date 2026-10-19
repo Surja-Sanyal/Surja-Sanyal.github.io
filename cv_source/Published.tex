@@ -1,0 +1,87 @@
+\documentclass{article}
+
+% Language setting
+\usepackage[english]{babel}
+
+% Set page size and margins
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\setstretch{1.5}
+
+\usepackage[style=ieee, sorting=ddnt, defernumbers=true]{biblatex} % 'none' keeps the order exactly as in your .bib file
+\addbibresource{own-bib.bib} % Ensure your file is named exactly this
+
+%% Check for published articles: skips if note is "(Under Review)" OR "(Under Revision)"
+\defbibcheck{published}{%
+  \iffieldequalstr{note}{(Under Review)}
+    {\skipentry}
+    {\iffieldequalstr{note}{(Under Revision)}
+       {\skipentry}
+       {}% Keeps the entry if it is neither
+    }%
+}
+
+%% Check for manuscripts in progress: keeps if note is "(Under Review)" OR "(Under Revision)"
+\defbibcheck{inreview}{%
+  \iffieldequalstr{note}{(Under Review)}
+    {} % Keeps the entry
+    {\iffieldequalstr{note}{(Under Revision)}
+       {} % Keeps the entry
+       {\skipentry}% Skips if it is neither
+    }%
+}
+
+% --- Fix Name Bolding found previously ---
+\newcommand{\myname}[2]{%
+   \def\mylastname{#1}%
+   \def\myfirstname{#2}%
+}
+
+\defbibfilter{booksandchapters}{%
+( type=book or type=incollection )
+}
+
+\myname{Sanyal}{Surja}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ test {\ifdefstrequal{\namepartfamily}{\mylastname}}
+               and
+               test {\ifdefstrequal{\namepartgiven}{\myfirstname}}}
+    {\textbf{#1}}%
+    {#1}%
+}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ test {\ifdefstrequal{\namepartfamily}{\mylastname}}
+               and
+               test {\ifdefstrequal{\namepartgiven}{\myfirstname}}}
+    {\textbf{#1}}%
+    {#1}%
+}
+
+\title{List of Publications}
+\author{Surja Sanyal} % Replace with your actual name
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\nocite{*}
+
+%% 1. Published and Accepted Journals
+\printbibliography[heading={subbibliography},title={\textsc{\underline{Journal Articles}}},type=article,check=published]
+
+%% 3. Conferences
+\printbibliography[heading={subbibliography},title={\textsc{\underline{Conference Proceedings}}},type=inproceedings]
+
+%% 4. Books and Chapters
+\printbibliography[heading={subbibliography},title={\textsc{\underline{Books and Chapters}}},filter={booksandchapters}]
+
+\end{document}
