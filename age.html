@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html><body><script>
+  const dob = new Date(1989, 2, 20), now = new Date();
+  let age = now.getFullYear() - dob.getFullYear();
+  if (now.getMonth() < 2 || (now.getMonth() === 2 && now.getDate() < 20)) age--;
+  document.body.innerHTML = `<h2 style="font-family:sans-serif;text-align:center;margin-top:20vh;">I am currently ${age} years old.</h2>`;
+</script></body></html>
