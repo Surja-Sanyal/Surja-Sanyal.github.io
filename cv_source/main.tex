@@ -30,28 +30,38 @@
 \DeclareFieldFormat*{note}{\textbf{#1}} 
 
 
-% % Define a custom command for a clickable Date of Birth
-% % Usage: \clickableDOB{YYYY}{MM}{DD}{Text to display} (MM is 1-indexed: 1=Jan, 3=Mar, 12=Dec)
-% \newcommand{\clickableDOB}[4]{%
-%   \edef\dobjs{%
-%     var today = new Date();
-%     var age = today.getFullYear() - #1;
-%     var m = (today.getMonth() + 1) - #2;
-%     if (m < 0) { age--; }
-%     if (m == 0) { if (today.getDate() < #3) { age--; } }
-%     app.alert("I am currently " + age + " years old.", 3, 0, "Current Age");%
-%   }%
-%   \ifdefined\pdfstartlink
-%     % For pdfLaTeX
-%     \pdfstartlink attr{/Border[0 0 0]} user{/Subtype/Link/A<< /S/JavaScript /JS(\dobjs) >>}#4\pdfendlink
-%   \else\ifdefined\pdfextension
-%     % For LuaLaTeX
-%     \pdfextension startlink attr{/Border[0 0 0]} user{/Subtype/Link/A<< /S/JavaScript /JS(\dobjs) >>}#4\pdfextension endlink
-%   \else
-%     % For XeLaTeX
-%     \special{pdf:bann << /Type/Annot /Subtype/Link /Border[0 0 0] /A << /S/JavaScript /JS(\dobjs) >> >>}#4\special{pdf:eann}%
-%   \fi\fi
-% }
+% Define a custom command for a clickable Date of Birth
+% Usage: \clickableDOB{YYYY}{MM}{DD}{Text to display} (MM is 1-indexed: 1=Jan, 3=Mar, 12=Dec)
+\newcommand{\clickableDOB}[4]{%
+  \edef\dobjs{%
+    var today = new Date();
+    var y = today.getFullYear() - #1;
+    var m = (today.getMonth() + 1) - #2;
+    var d = today.getDate() - #3;
+    if (d < 0) {
+      m--;
+      d += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+    }
+    if (m < 0) {
+      y--;
+      m += 12;
+    }
+    var yStr = y + (y == 1 ? " year, " : " years, ");
+    var mStr = m + (m == 1 ? " month, and " : " months, and ");
+    var dStr = d + (d == 1 ? " day" : " days");
+    app.alert("I am currently " + yStr + mStr + dStr + " old.", 3, 0, "Current Age");%
+  }%
+  \ifdefined\pdfstartlink
+    % For pdfLaTeX
+    \pdfstartlink attr{/Border[0 0 0]} user{/Subtype/Link/A<< /S/JavaScript /JS(\dobjs) >>}#4\pdfendlink
+  \else\ifdefined\pdfextension
+    % For LuaLaTeX
+    \pdfextension startlink attr{/Border[0 0 0]} user{/Subtype/Link/A<< /S/JavaScript /JS(\dobjs) >>}#4\pdfextension endlink
+  \else
+    % For XeLaTeX
+    \special{pdf:bann << /Type/Annot /Subtype/Link /Border[0 0 0] /A << /S/JavaScript /JS(\dobjs) >> >>}#4\special{pdf:eann}%
+  \fi\fi
+}
 
 
 \makeatletter
@@ -179,7 +189,7 @@
     % {\Huge\bfseries\sffamily\textsc{Surja Sanyal}}
     {\Huge\bfseries\textsc{\hl{Surja Sanyal}}\vspace{1pt}}
 
-    \makefield{\faCalendar}{\href{https://surja-sanyal.github.io/age.html}{\texttt{Born: 20 March 1989}}}
+    \makefield{\faCalendar}{\clickableDOB{1989}{3}{20}{\texttt{Born: 20 March 1989}}}
     
     \makefield{\faPhoneSquare}{\href{tel:+918595320732}{\texttt{+91 -- 85~95~320~732}}}\hspace{-1.75em}\makefield{\faComments[regular]}{}\hspace{-2.3em}\makefield{\faWhatsapp}{}%
     
